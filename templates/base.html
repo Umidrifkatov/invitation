@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение {% block title %} {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Marck+Script">
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Neucha">
+    <style>
+        
+        
+        .italic{
+            font-family: 'Marck Script' !important;
+        }
+        body {
+            font-family: 'Neucha' !important;
+            color: rgb(228, 228, 228);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin: 0;
+            background-color: rgb(15, 15, 14);
+        }
+
+        /* Style the container */
+        .container {
+            max-width: 380px;
+            min-width: 280px;
+            padding: 20px;
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<div class="container text-center">
+    
+    {% block content %}
+    <!-- Default content block, to be overridden by child templates -->
+    {% endblock %}
+    <br> <br>
+    
+    <div class="mb-5">
+        Время: 18:00 <br>
+
+Santini bar & terrace <br>г.Ташкент, ул.Каранкул 61
+    </div>
+
+
+
+
+    <style>
+        table {
+          border-collapse: collapse;
+        }
+        th, td {
+          border: 1px solid rgb(62, 62, 62);
+          padding: 8px;
+          text-align: center;
+        }
+        .marked {
+          background-color: rgb(248, 248, 248);
+          color: black;
+          
+        }
+      </style>
+      
+      
+      <h2>Сентябрь 2023</h2>
+      
+      <table class="mx-auto" style="margin-bottom: 10px;">
+        <tr>
+          <th>Пн.</th>
+          <th>ВТ.</th>
+          <th>Ср.</th>
+          <th>Чт.</th>
+          <th>Пт.</th>
+          <th>Сб.</th>
+          <th>Вс.</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <!-- ... Other days of the month ... -->
+        <tr>
+          
+          <td class="">4</td>
+          <td class="">5</td>
+          <td class="">6</td>
+          <td class="">7</td>
+          <td class="">8</td>
+          <td class="">9</td>
+          <td class="">10</td>
+        </tr>
+        <tr>
+          <td class="">11</td>
+          <td class="">12</td>
+          <td class="marked">13</td>
+          <td class="">14</td>
+          <td class="">15</td>
+          <td class="">16</td>
+          <td class="">17</td>
+        </tr>
+        <tr>
+          <td class="">18</td>
+          <td class="">19</td>
+          <td class="">20</td>
+          <td class="">21</td>
+          <td class="">22</td>
+          <td class="">23</td>
+          <td class="">24</td>
+        </tr>
+        <tr>
+          <td class="">25</td>
+          <td class="">26</td>
+          <td class="">27</td>
+          <td class="">28</td>
+          <td class="">29</td>
+          <td class="">30</td> 
+        </tr>
+      </table>
+
+      <p class="fs-4" id="countdown" style="margin-bottom: 100px;"></p>
+      <p class="text-shadow-dark mb-5 fs-4"> <b> С любовью,<br> Умид и Севинч</p> </b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script  type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2bc8c37e2e94735fd95ab843092267e828041c3fc8eb60c95832a33cd5526f37&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+
+
+
+<script>
+    // Set the date for the countdown (13th September 2023)
+    const countdownDate = new Date('2023-09-13T18:00:00').getTime();
+    
+    // Update the countdown every second
+    const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const timeRemaining = countdownDate - now;
+    
+        if (timeRemaining <= 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown').innerHTML = 'The big day has arrived!';
+        } else {
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            
+    
+            document.getElementById('countdown').innerHTML = `Осталось  ${days} дней ${hours} часов ${minutes} минут`;
+        }
+    }, 100);
+    </script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</body>
+</html>

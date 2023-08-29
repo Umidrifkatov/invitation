@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="background-image mb-0" style="background-image: linear-gradient(to bottom, rgb(15, 15, 15) 10%, rgba(0, 0, 0, 0.043) 45%, rgb(15, 15, 15) 95%), url('{% static 'back.jpg' %}'); background-size: cover;" >
+    
+    <hr style="color: rgba(0, 0, 0, 0);">
+    <div class="italic fs-1" style="margin-top: 40px;"> Умид & Севинч</div>
+    <div style="margin-bottom: 400px;" class="italic">13 Сентября 2023</div>
+    <hr style="color: rgba(0, 0, 0, 0);">
+  </div>
+    
+    
+
+  <p class="fs-4 "> Дорогой(ая)  {{ visitor.name }}</p> 
+
+    <!-- <img src='{% static 'back2.jpg' %}' alt="" style="width: 100%;"> -->
+
+    <div class="background-image mt-0" style="background-image: linear-gradient(to bottom, rgba(15, 15, 15, 0.943) 10%, rgba(255, 255, 255, 0) 40%, rgb(15, 15, 15) 96% ), url('{% static 'back2.jpg' %}'); background-size: cover;
+    background-repeat: no-repeat;">
+      <hr style="color: rgba(0, 0, 0, 0);">
+         
+      <p class="text-shadow-dark mt-5" style="margin-bottom: 400px;"> Мы будем рады разделить самый светлый и долгожданный для нас день именно с Вами!</p>
+      <hr style="color: rgba(0, 0, 0, 0);">
+    </div>
+
+    
+    
+
+    
+    
+    <!-- {{ visitor.unique_identifier }} -->
+    
+    
+    
+    
+  
+
+{% endblock %}
