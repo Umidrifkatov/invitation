@@ -8,6 +8,7 @@ migrations/
 # C extensions
 *.so
 *.sqlite3
+admin/
 # Distribution / packaging
 .Python
 build/
